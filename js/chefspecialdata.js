@@ -1,0 +1,80 @@
+const chefSpecialData = [
+    {
+        id: 1,
+        name: "Balsamic Bruschetta",
+        image: "./res/menu/sides/balsamic bruschetta.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 2,
+        name: "Sesame Avocado Toast",
+        image: "./res/menu/sides/sesame avocado toast.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 3,
+        name: "Platinum Falafel Platter",
+        image: "./res/menu/falafel-meal/platinum falafel platter.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 4,
+        name: "Pita Pocket",
+        image: "./res/menu/falafels/pita pocket.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 5,
+        name: "Paneer Shawarma",
+        image: "./res/menu/wrap/paneer shawarma.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 6,
+        name: "Pink Sauce",
+        image: "./res/menu/pasta/pink sauce pasta.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 7,
+        name: "Paprika Farmhouse",
+        image: "./res/menu/pizza/paprika farmhouse.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 8,
+        name: "Mexican Cottage Cheese Sizzler",
+        image: "./res/menu/sizzlers/mexican cottage cheese sizzler.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 9,
+        name: "Moroccan Salad",
+        image: "./res/menu/salad/moroccan salad.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 10,
+        name: "Cilantro Bean Rice",
+        image: "./res/menu/rice/cilantro bean rice.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 11,
+        name: "Virgin Bloody Mary",
+        image: "./res/menu/refreshments/virgin bloody mary.png",
+        imagePosition: "object-[50%_40%]",
+    },
+    {
+        id: 12,
+        name: "Blueberry Currant",
+        image: "./res/menu/refreshments/blueberry currant.png",
+        imagePosition: "object-[50%_90%]",
+    },
+    {
+        id: 13,
+        name: "Biscoff Cheesecake",
+        image: "./res/menu/desserts/biscoff cheesecake.png",
+        imagePosition: "object-[50%_90%]",
+    },
+];

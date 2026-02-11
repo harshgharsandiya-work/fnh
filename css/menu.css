@@ -1,0 +1,45 @@
+/* Category Button - Default/Inactive Style */
+.filter-btn {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #d1d5db; /* gray-300 */
+    color: #374151; /* gray-700 */
+    transition: all 0.25s ease;
+}
+
+/* Hover for inactive buttons only */
+.filter-btn:not(.active):hover {
+    border-color: #db3444;
+    color: #db3444;
+    background-color: rgba(219, 52, 68, 0.05);
+}
+
+/* Active state styling */
+.filter-btn.active {
+    background-color: #db3444;
+    color: #ffffff;
+    border-color: #db3444;
+    box-shadow: 0 6px 16px rgba(219, 52, 68, 0.35);
+    transform: translateY(-1px);
+}
+
+/* Ensure active hover stays red */
+.filter-btn.active:hover {
+    color: #ffffff;
+    background-color: #db3444;
+}
+
+/* Click animation */
+.filter-btn:active {
+    transform: scale(0.96);
+}
+
+/* Active state glow effect */
+.filter-btn.active::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    box-shadow: 0 0 0 4px rgba(219, 52, 68, 0.15);
+    pointer-events: none;
+}
