@@ -82,16 +82,14 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 $mail = new PHPMailer(true);
-$mail->SMTPDebug = 2;
-$mail->Debugoutput = 'html';
 
 try {
     // ================= SMTP CONFIG =================
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
+    $mail->Host       = 'smtp-relay.brevo.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'harshgharsandiya.work@gmail.com';
-    $mail->Password   = 'hwnfqlnpkvvttyhd'; 
+    $mail->Username   = 'a21c6f001@smtp-brevo.com';
+    $mail->Password   = 'xsmtpsib-cd0c388f406ac8d6d1364b36b3a65643e6428d2a75700b46920cb3f403ed7851-HJ3dZ0En98Vfgxnb'; 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
