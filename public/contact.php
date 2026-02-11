@@ -82,6 +82,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 $mail = new PHPMailer(true);
+$mail->SMTPDebug = 2;
+$mail->Debugoutput = 'html';
 
 try {
     // ================= SMTP CONFIG =================
