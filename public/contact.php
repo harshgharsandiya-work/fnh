@@ -42,6 +42,39 @@ if (!preg_match('/^[0-9]{10}$/', $phone)) {
     exit;
 }
 
+function contactEmailTemplate($name, $email, $phone, $message)
+{
+    return "
+    <div style='font-family: Arial, sans-serif; background:#f6f6f6; padding:20px;'>
+        <div style='max-width:600px; margin:auto; background:#ffffff; border-radius:8px; overflow:hidden;'>
+
+            <div style='background:#151515; color:#ffffff; padding:16px 20px;'>
+                <h2 style='margin:0; font-size:20px;'>New Contact Form Submission</h2>
+            </div>
+
+            <div style='padding:20px; color:#333;'>
+                <p><strong>Name:</strong> {$name}</p>
+                <p><strong>Email:</strong> {$email}</p>
+                <p><strong>Phone:</strong> {$phone}</p>
+
+                <div style='margin-top:15px;'>
+                    <p><strong>Message:</strong></p>
+                    <div style='background:#f2f2f2; padding:12px; border-radius:6px;'>
+                        {$message}
+                    </div>
+                </div>
+            </div>
+
+            <div style='background:#f0f0f0; padding:12px; font-size:12px; color:#666; text-align:center;'>
+                Sent from F&H Website Contact Form
+            </div>
+
+        </div>
+    </div>
+    ";
+}
+
+
 // Load Composer autoloader
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -69,20 +102,19 @@ try {
     $mail->isHTML(true);
     $mail->Subject = 'New Contact Form Submission';
 
-    $mail->Body = "
-        <h3>New Contact Message</h3>
-        <p><strong>Name:</strong> {$name}</p>
-        <p><strong>Email:</strong> {$email}</p>
-        <p><strong>Phone:</strong> {$phone}</p>
-        <p><strong>Message:</strong><br>{$message}</p>
-    ";
+    $mail->Body = contactEmailTemplate(
+        $name,
+        $email,
+        $phone,
+        nl2br(htmlspecialchars($message))
+    );
 
-    $mail->AltBody = "
-Name: {$name}
-Email: {$email}
-Phone: {$phone}
-Message:
-{$message}
+    $mail->AltBody = "New Contact Form Submission
+        Name: {$name}
+        Email: {$email}
+        Phone: {$phone}
+        Message:
+        {$message}
     ";
 
     // Send mail
